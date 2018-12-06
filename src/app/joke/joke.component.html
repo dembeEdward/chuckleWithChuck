@@ -1,0 +1,16 @@
+<div *ngIf="category$">
+  <h1>{{category$}}</h1>
+</div>
+
+<app-loader *ngIf="show$"></app-loader>
+
+<div *ngIf="joke$">
+  <ul>
+    <li>
+      <img src="{{joke$.icon_url}}" alt="Avatar" class="avatar">
+      <p>{{joke$.value}}</p>
+    </li>
+  </ul>
+
+  <a class="btn btn-green" (click)="getAnotherJoke()">Another Joke</a>
+</div>
